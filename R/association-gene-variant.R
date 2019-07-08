@@ -1,9 +1,8 @@
-#' @name gtexAsso.GencodeVariant
+#' @name gencodeVariantPair
 #' @title Association information 
 #' @description calculates the gene-variant association 
-#' @source https://gtexportal.org/home/api-docs/#/
-#' @return gene level
-gtexAsso.GencodeVariant <- function(
+#' @export
+gencodeVariantPair <- function(
   gencodeID = 'ENSG00000105341.14',
   variantID = 'rs4674',
   tissueSiteDetailID = 'Adipose_Subcutaneous',

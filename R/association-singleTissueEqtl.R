@@ -1,6 +1,7 @@
 #' @name singleTissueEqtl
 #' @title Association information per tissue
-#' @description calculates the gene-variant association 
+#' @description calculates the gene-variant association
+#' @export
 singleTissueEqtl <- function(
   snpID = NULL,
   gencodeID = NULL,
