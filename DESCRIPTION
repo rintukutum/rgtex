@@ -1,0 +1,10 @@
+Package: rgtex
+Title: Query GTEx using R
+Version: 0.0.0.1
+Authors@R: person("Rintu","Kutum",email = "rintukutum@gmail.com",
+                  role = c("aut","cre"))
+Description: Bla bla
+Depends: R (>= 3.1.0)
+Licence: MIT
+LazyData: true
+RoxygenNote: 6.1.1
