@@ -5,7 +5,7 @@
 \title{Association information per tissue}
 \usage{
 singleTissueEqtl(snpID = NULL, gencodeID = NULL, geneSymbol = NULL,
-  tissueID = NULL, datasetID = c("gtex_v6p", "gtex_v7"))
+  tissueID = NULL, datasetID = NULL)
 }
 \description{
 calculates the gene-variant association

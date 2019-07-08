@@ -7,11 +7,12 @@ singleTissueEqtl <- function(
   gencodeID = NULL,
   geneSymbol = NULL,
   tissueID = NULL,
-  datasetID = c('gtex_v6p','gtex_v7')
+  datasetID = NULL
 ){
   snp.check <- !is.null(snpID)
   geneSymbol.check <- !is.null(geneSymbol)
   gencodeID.check <- !is.null(gencodeID)
+  dataset.check <- !is.null(datasetID)
   if(any(c(snp.check,geneSymbol,gencodeID.check))){
     
   }else{
@@ -41,13 +42,19 @@ singleTissueEqtl <- function(
   }else{
     stop('Please provide any tissueID')
   }
+  # c('gtex_v6p','gtex_v7')
+  if(dataset.check){
+    temp.datasetID <- paste0("&datasetId=",datasetID)
+  }else{
+    stop('Please provide GTEx dataset ID')
+  }
   gtex.url <- paste0(
     temp.url,
     temp.geneSymbol,
     temp.gencodeID,
     temp.snpID,
     temp.tissueID,
-    datasetID
+    temp.datasetID
   )
   #library('httr')
   gtex.request <- httr::GET(
