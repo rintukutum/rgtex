@@ -61,7 +61,9 @@ singleTissueEqtl <- function(
     url = gtex.url
   )
   if(gtex.request$status_code == 200){
-    cat('Connection estabilshed! ')
+    # cat('Connection estabilshed! ')
+  }else{
+    cat('Connection not established')
   }
   gtex.content <- httr::content(gtex.request)
   return(gtex.content)
