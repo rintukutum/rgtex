@@ -29,7 +29,7 @@ gtex.meta <- list(
     'Breast_Mammary_Tissue',
     #-----------------------------
     'Cells_EBV-transformed_lymphocytes',
-    'Cells_Transfored_fibroblasts',
+    'Cells_Transformed_fibroblasts',
     #-----------------------------
     'Cervix_Ectocervix',
     'Cervix_Endocervix',
@@ -38,10 +38,10 @@ gtex.meta <- list(
     'Colon_Transverse',
     #-----------------------------
     'Esophagus_Gastroesophageal_Junction',
-    'Esophagus_Muscosa',
+    'Esophagus_Mucosa',
     'Esophagus_Muscularis',
     'Fallopian_Tube',
-    'Heart_Atial_Appendage',
+    'Heart_Atrial_Appendage',
     'Heart_Left_Ventricle',
     'Kidney_Cortex',
     'Liver',
