@@ -34,22 +34,19 @@ dynEqtl <- function(
     cat('Connection not established')
   }
   gtex.content <- httr::content(gtex.request)
-  varinfo <- strsplit(
-    as.character(gtex.content$variantId),
-    split = '\\_')[[1]]
-  ref <- paste0(varinfo[3],varinfo[3])
-  alt <- paste0(varinfo[4],varinfo[4])
-  het <- paste0(varinfo[3],varinfo[4])
-  varGeno <- c(ref,het,alt)
-  names(varGeno) <- 0:2
-  
-  df_ <- data.frame(
-    genotype = varGeno[as.character(unlist(gtex.content$genotypes))],
-    expr = unlist(gtex.content$data),
-    stringsAsFactors = FALSE
-  )
-  return(list(
-    json = gtex.content,
-    geno.expr = df_
-  ))
+  # varinfo <- strsplit(
+  #   as.character(gtex.content$variantId),
+  #   split = '\\_')[[1]]
+  # ref <- paste0(varinfo[3],varinfo[3])
+  # alt <- paste0(varinfo[4],varinfo[4])
+  # het <- paste0(varinfo[3],varinfo[4])
+  # varGeno <- c(ref,het,alt)
+  # names(varGeno) <- 0:2
+  # 
+  # df_ <- data.frame(
+  #   genotype = varGeno[as.character(unlist(gtex.content$genotypes))],
+  #   expr = unlist(gtex.content$data),
+  #   stringsAsFactors = FALSE
+  # )
+  return(gtex.content)
 }
