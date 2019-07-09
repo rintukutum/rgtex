@@ -33,7 +33,7 @@ dynEqtl <- function(
   }else{
     cat('Connection not established')
   }
-  gtex.content <- httr::content(gtex.request,as = "text")
+  gtex.content <- httr::content(gtex.request,encoding = 'UTF-8')
   # varinfo <- strsplit(
   #   as.character(gtex.content$variantId),
   #   split = '\\_')[[1]]
