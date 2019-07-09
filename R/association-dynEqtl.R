@@ -34,7 +34,9 @@ dynEqtl <- function(
     cat('Connection not established')
   }
   gtex.content <- httr::content(gtex.request)
-  varinfo <- strsplit(gtex.content$variantId,split = '\\_')[[1]]
+  varinfo <- strsplit(
+    as.character(gtex.content$variantId),
+    split = '\\_')[[1]]
   ref <- paste0(varinfo[3],varinfo[3])
   alt <- paste0(varinfo[4],varinfo[4])
   het <- paste0(varinfo[3],varinfo[4])
