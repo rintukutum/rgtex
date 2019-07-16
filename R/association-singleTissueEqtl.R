@@ -13,7 +13,7 @@ singleTissueEqtl <- function(
   geneSymbol.check <- !is.null(geneSymbol)
   gencodeID.check <- !is.null(gencodeID)
   dataset.check <- !is.null(datasetID)
-  if(any(c(snp.check,geneSymbol,gencodeID.check))){
+  if(any(c(snp.check,geneSymbol.check,gencodeID.check))){
     
   }else{
     stop("Please provide SNP ID or gene sysmbol or gencode ID")
